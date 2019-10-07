@@ -1,0 +1,25 @@
+function accum(s) {
+  let counter = 0;
+  let finalArr = [];
+  let accumArr = s.split('');
+  for(let i = 0; i < s.length; i++){
+    let numCount = i;
+    numCount = i;
+    if(counter === 0){
+      finalArr.push(accumArr[i].toUpperCase());
+      counter++;
+      numCount--;
+    }
+    if(counter != 0){
+      while(numCount > -1){
+      finalArr.push(accumArr[i].toLowerCase());
+      numCount--;
+      }
+    }
+    finalArr.push('-');
+    counter = 0;
+  }
+  finalArr.pop();
+  let finalStr = finalArr.join('');
+  return finalStr;
+}
